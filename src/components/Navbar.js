@@ -9,8 +9,8 @@ const Navbar = () => {
         <NavLink exact to="/" activeClassName="active">
           Home
         </NavLink>
-        <NavLink to="/pizza" activeClassName="active">
-          Order
+        <NavLink to="/Help" activeClassName="active">
+          Help
         </NavLink>
       </nav>
     </header>

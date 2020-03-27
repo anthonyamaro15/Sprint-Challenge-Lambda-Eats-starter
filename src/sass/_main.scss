@@ -8,6 +8,7 @@
 
 a {
   text-decoration: none;
+  color: #333;
 }
 
 label,
@@ -199,32 +200,70 @@ input {
   width: 80%;
   margin: 10rem auto 0;
 
-  .img {
-    //  border: 1px solid red;
-    //  background: url("../img/pizza1.jpg");
-    //  background-size: cover;
-    //  background-position: center;
+  //   .img {
+  //     //  border: 1px solid red;
+  //     //  background: url("../img/pizza1.jpg");
+  //     //  background-size: cover;
+  //     //  background-position: center;
 
-    width: 100%;
-    height: 30vh;
-  }
+  //     width: 100%;
+  //     height: 30vh;
+  //   }
 
-  nav {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
+  .pizza {
+    width: 320px;
+    border: 1px solid rgb(232, 230, 230);
+    height: 25vh;
+    .bg-image {
+      background: url("../img/Pizza.jpg");
+      background-size: cover;
+      background-position: center;
+      // border: 1px solid blue;
 
-    a {
-      display: inline-block;
-      padding: 0.5rem 2.5rem;
-      background: rgb(232, 230, 230);
-      color: #333;
-      transition: all 0.5s ease;
+      height: 15vh;
+    }
 
-      &:hover {
-        background: #333;
-        color: white;
+    .details {
+      padding: 0.3rem;
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .description {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      .time {
+        padding: 0.2rem 1rem;
+        margin-right: 0.5rem;
+        background: rgb(232, 230, 230);
+      }
+
+      .fee {
+        padding: 0.2rem 1rem;
+        background: rgb(232, 230, 230);
       }
     }
   }
+
+  //   nav {
+  //     margin-top: 2rem;
+  //     display: flex;
+  //     justify-content: center;
+
+  //     a {
+  //       display: inline-block;
+  //       padding: 0.5rem 2.5rem;
+  //       background: rgb(232, 230, 230);
+  //       color: #333;
+  //       transition: all 0.5s ease;
+
+  //       &:hover {
+  //         background: #333;
+  //         color: white;
+  //       }
+  //     }
+  //   }
 }
