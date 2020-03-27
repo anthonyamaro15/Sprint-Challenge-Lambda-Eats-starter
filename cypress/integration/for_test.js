@@ -15,6 +15,9 @@ describe("testing our valunteer form", function() {
     //    .type("email@email.com")
     //    .should("have.value", "email@email.com");
 
+    cy.get('[type="checkbox"]').check();
+    cy.get('[type="radio"]').check();
+
     cy.get('input[name="instructions"]')
       .type("enter instructions here")
       .should("have.value", "enter instructions here");
@@ -23,7 +26,7 @@ describe("testing our valunteer form", function() {
       .type("1")
       .should("have.value", "1");
 
-    cy.get(".submit").click();
+    //  cy.get(".submit").click();
   });
 
   //   cy.get("textarea")
