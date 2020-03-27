@@ -18,20 +18,23 @@ input {
   //   cursor: pointer;
 }
 
+.error {
+  color: red;
+  padding: 0 0.3rem;
+  font-size: 0.8rem;
+}
+
 .App {
-  //   border: 1px solid red;
   width: 1100px;
   margin: 3rem auto 0;
   padding: 0 1rem;
   font-family: "Open Sans", sans-serif;
 
   header {
-    //  border: 1px solid blue;
     display: flex;
     justify-content: space-between;
 
     nav {
-      // border: 1px solid red;
       display: flex;
       align-items: center;
 
@@ -41,7 +44,6 @@ input {
       }
 
       a {
-        //   border: 1px solid red;
         display: inline-block;
         padding: 0.5rem 2.5rem;
         background: rgb(232, 230, 230);
@@ -57,7 +59,6 @@ input {
   }
 
   .main-content {
-    //  border: 1px solid blue;
     border: 1px solid rgb(198, 188, 188);
 
     width: 60%;
@@ -70,7 +71,6 @@ input {
     }
 
     .gb-img {
-      // border: 1px solid red;
       height: 20vh;
       margin-bottom: 3rem;
       background: url("../img/Pizza.jpg");
@@ -79,12 +79,25 @@ input {
     }
 
     form {
+      .name-input {
+        display: flex;
+        justify-content: center;
+        label {
+          width: 100%;
+          padding: 0 1.5rem;
+
+          input {
+            width: 100%;
+            padding: 0.4rem;
+            font-size: 1rem;
+          }
+        }
+      }
       input {
         margin-right: 0.5rem;
         margin-bottom: 0.7rem;
       }
       .wrapper {
-        //   border: 1px solid blue;
         display: flex;
         flex-direction: column;
         padding: 0.3rem 1.5rem;
@@ -121,17 +134,14 @@ input {
           padding: 0 1.5rem;
           display: flex;
           justify-content: space-between;
-          //  border: 1px solid red;
 
           .side-one {
             width: 47%;
-            // border: 1px solid blue;
             display: flex;
             flex-direction: column;
           }
           .side-two {
             width: 47%;
-            // border: 1px solid blue;
             display: flex;
             flex-direction: column;
           }
@@ -139,18 +149,14 @@ input {
       }
 
       .instructions {
-        //   border: 1px solid red;
         width: 92%;
         margin: 0 auto;
 
         label {
           width: 100%;
-          //  display: flex;
-          //  justify-content: center;
           input {
             width: 100%;
             display: block;
-            // border: 1px solid red;
             padding: 0.4rem;
             font-size: 1rem;
           }
@@ -158,7 +164,6 @@ input {
       }
 
       .submit-btn {
-        //   border: 1px solid red;
         margin: 1rem 0 2rem;
         padding: 0 1.5rem;
 
@@ -166,7 +171,6 @@ input {
           display: flex;
           justify-content: space-between;
           .label-num {
-            // border: 1px solid blue;
             input {
               width: 50px;
               font-size: 1rem;
@@ -176,7 +180,6 @@ input {
           }
 
           button {
-            // border: 1px solid red;
             width: 80%;
             font-size: 1rem;
             display: flex;
@@ -196,19 +199,8 @@ input {
 }
 
 .Home {
-  //   border: 1px solid red;
   width: 80%;
   margin: 10rem auto 0;
-
-  //   .img {
-  //     //  border: 1px solid red;
-  //     //  background: url("../img/pizza1.jpg");
-  //     //  background-size: cover;
-  //     //  background-position: center;
-
-  //     width: 100%;
-  //     height: 30vh;
-  //   }
 
   .pizza {
     width: 320px;
@@ -218,8 +210,6 @@ input {
       background: url("../img/Pizza.jpg");
       background-size: cover;
       background-position: center;
-      // border: 1px solid blue;
-
       height: 15vh;
     }
 
@@ -247,23 +237,4 @@ input {
       }
     }
   }
-
-  //   nav {
-  //     margin-top: 2rem;
-  //     display: flex;
-  //     justify-content: center;
-
-  //     a {
-  //       display: inline-block;
-  //       padding: 0.5rem 2.5rem;
-  //       background: rgb(232, 230, 230);
-  //       color: #333;
-  //       transition: all 0.5s ease;
-
-  //       &:hover {
-  //         background: #333;
-  //         color: white;
-  //       }
-  //     }
-  //   }
 }

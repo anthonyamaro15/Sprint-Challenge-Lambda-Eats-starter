@@ -11,14 +11,25 @@ const Content = ({ status, errors, touched }) => {
     status && setPost(status);
     setEmpty(true);
   }, [status]);
-  //     red: "",
-  //   console.log(post);
 
   return (
     <div className="main-content">
       <h1>build your own pizza</h1>
       <div className="gb-img"></div>
       <Form>
+        <div className="name-input">
+          <label htmlFor="name">
+            <Field
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Type your name here "
+            />
+            {errors.name && touched.name && (
+              <p className="error">{errors.name}</p>
+            )}
+          </label>
+        </div>
         <div className="wrapper">
           <span className="choice">choice of size</span>
           <span className="desc">required</span>
@@ -110,9 +121,6 @@ const Content = ({ status, errors, touched }) => {
                 name="instructions"
                 placeholder="anything else you'd like to add?"
               />
-              {errors.instructions && touched.instructions && (
-                <p>{errors.instructions}</p>
-              )}
             </label>
           </div>
 
@@ -144,6 +152,7 @@ const Content = ({ status, errors, touched }) => {
 
 export default withFormik({
   mapPropsToValues: () => ({
+    name: "",
     size: "",
     red: "",
     garlic: "",
@@ -159,12 +168,16 @@ export default withFormik({
     count: ""
   }),
   validationSchema: yup.object().shape({
-    instructions: yup.string().required("cannot be empty")
+    name: yup
+      .string()
+      .required("please enter name")
+      .min(2, "enter full name")
   }),
   handleSubmit: (values, { setStatus, resetForm }) => {
     axios
       .post("https://reqres.in/api/users", values)
       .then(res => {
+        console.log(res.data);
         setStatus([res.data]);
         resetForm();
       })
