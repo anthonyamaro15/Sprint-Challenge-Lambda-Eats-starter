@@ -76,34 +76,34 @@ const Content = ({ status, errors, touched }) => {
           <div className="topping-wrapper">
             <div className="side-one">
               <label htmlFor="pepperoni">
-                <Field type="checkbox" id="pepperoni" name="pepperoni" />
+                <Field type="radio" id="pepperoni" name="pepperoni" />
                 pepperoni
               </label>
 
               <label htmlFor="bacon">
-                <Field type="checkbox" id="bacon" name="bacon" />
+                <Field type="radio" id="bacon" name="bacon" />
                 canadian bacon
               </label>
 
               <label htmlFor="italian">
-                <Field type="checkbox" id="italian" name="italian" />
+                <Field type="radio" id="italian" name="italian" />
                 spicy italian sausage
               </label>
             </div>
 
             <div className="side-two">
               <label htmlFor="chicken">
-                <Field type="checkbox" id="chicken" name="chicken" />
+                <Field type="radio" id="chicken" name="chicken" />
                 grilled chicked
               </label>
 
               <label htmlFor="onions">
-                <Field type="checkbox" id="onions" name="onions" />
+                <Field type="radio" id="onions" name="onions" />
                 onions
               </label>
 
               <label htmlFor="pineapple">
-                <Field type="checkbox" id="pineapple" name="pineapple" />
+                <Field type="radio" id="pineapple" name="pineapple" />
                 pineapple
               </label>
             </div>
@@ -129,7 +129,7 @@ const Content = ({ status, errors, touched }) => {
               <label htmlFor="count" className="label-num">
                 <Field type="number" name="count" id="count" />
               </label>
-              <button type="submit">
+              <button type="submit" className="submit">
                 add to order <span className="total">$10.00</span>
               </button>
             </div>
