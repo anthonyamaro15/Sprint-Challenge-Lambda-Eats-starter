@@ -1,11 +1,11 @@
 import React from "react";
-
-const App = () => {
+import HomePage from "./components/HomePage";
+function App() {
   return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
+    <div className="App">
+      <HomePage />
+    </div>
   );
-};
+}
+
 export default App;

@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+label,
+input {
+  display: inline-block;
+  outline: none;
+  //   cursor: pointer;
+}
+
+.error {
+  color: red;
+  padding: 0 0.3rem;
+  font-size: 0.8rem;
+}
+
+.App {
+  width: 1100px;
+  margin: 3rem auto 0;
+  padding: 0 1rem;
+  font-family: "Open Sans", sans-serif;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      .active {
+        background: #333;
+        color: white;
+      }
+
+      a {
+        display: inline-block;
+        padding: 0.5rem 2.5rem;
+        background: rgb(232, 230, 230);
+        color: #333;
+        transition: all 0.5s ease;
+
+        &:hover {
+          background: #333;
+          color: rgb(232, 230, 230);
+        }
+      }
+    }
+  }
+
+  .main-content {
+    border: 1px solid rgb(198, 188, 188);
+
+    width: 60%;
+    margin: 5rem auto 0;
+
+    h1 {
+      text-align: center;
+      margin: 1rem 0 2rem;
+      font-size: 1.7rem;
+    }
+
+    .gb-img {
+      height: 20vh;
+      margin-bottom: 3rem;
+      background: url("../img/Pizza.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    form {
+      .name-input {
+        display: flex;
+        justify-content: center;
+        label {
+          width: 100%;
+          padding: 0 1.5rem;
+
+          input {
+            width: 100%;
+            padding: 0.4rem;
+            font-size: 1rem;
+          }
+        }
+      }
+      input {
+        margin-right: 0.5rem;
+        margin-bottom: 0.7rem;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0.3rem 1.5rem;
+        margin: 1rem 0;
+        background: rgb(232, 230, 230);
+
+        .choice {
+          font-size: 1.3rem;
+          padding-bottom: 0.2rem;
+        }
+        .desc {
+          font-size: 0.8rem;
+        }
+      }
+
+      #size {
+        font-size: 1rem;
+        width: 250px;
+        // margin: 1rem 0;
+        margin: 0 1.5rem;
+      }
+
+      .sauce-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.5rem;
+        font-size: 1.1rem;
+      }
+
+      .toppings-container {
+        font-size: 1.1rem;
+
+        .topping-wrapper {
+          padding: 0 1.5rem;
+          display: flex;
+          justify-content: space-between;
+
+          .side-one {
+            width: 47%;
+            display: flex;
+            flex-direction: column;
+          }
+          .side-two {
+            width: 47%;
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      .instructions {
+        width: 92%;
+        margin: 0 auto;
+
+        label {
+          width: 100%;
+          input {
+            width: 100%;
+            display: block;
+            padding: 0.4rem;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .submit-btn {
+        margin: 1rem 0 2rem;
+        padding: 0 1.5rem;
+
+        .count {
+          display: flex;
+          justify-content: space-between;
+          .label-num {
+            input {
+              width: 50px;
+              font-size: 1rem;
+              padding: 0.3rem;
+              height: 100%;
+            }
+          }
+
+          button {
+            width: 80%;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            outline: none;
+            border: none;
+            background: rgb(232, 230, 230);
+            border-radius: 3px;
+            border: 1px solid rgb(198, 188, 188);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Home {
+  width: 80%;
+  margin: 10rem auto 0;
+
+  .pizza {
+    width: 320px;
+    border: 1px solid rgb(232, 230, 230);
+    height: 25vh;
+    .bg-image {
+      background: url("../img/Pizza.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 15vh;
+    }
+
+    .details {
+      padding: 0.3rem;
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .description {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      .time {
+        padding: 0.2rem 1rem;
+        margin-right: 0.5rem;
+        background: rgb(232, 230, 230);
+      }
+
+      .fee {
+        padding: 0.2rem 1rem;
+        background: rgb(232, 230, 230);
+      }
+    }
+  }
+}
